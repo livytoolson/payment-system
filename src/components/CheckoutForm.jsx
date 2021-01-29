@@ -10,14 +10,19 @@ import axios from 'axios'
 import './CheckoutForm.scss'
 
 const CheckoutForm = ({ selectedProduct, stripe, history }) => {
-    if (selectedProduct === null) history.push('/')
+    if (selectedProduct === null) { 
+      history.push('/') 
+      return null 
+    }
   
     const [receiptUrl, setReceiptUrl] = useState('')
   
     const handleSubmit = async event => {
       event.preventDefault()
   
-      const { token } = await stripe.createToken()
+      const { token } = await stripe.createToken({
+        name: 'customer name'
+      })
   
       const order = await axios.post('http://localhost:7000/api/stripe/charge', {
         amount: selectedProduct.price.toString().replace('.', ''),
