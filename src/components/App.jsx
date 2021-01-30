@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import Products from './Products'
-import Checkout from './Checkout'
+import Checkout from './checkout'
 import { products } from '../products'
 
 const history = createBrowserHistory()

@@ -1,5 +1,5 @@
 // change key -->
-const stripe = require('stripe')('sk_test_T0a4kiCJInFB1DjREcCAcg9l00GOHeag5g')
+const stripe = require('stripe')('sk_test_51IEkOhBJPhJXshAo48wHFaL5I90oAlk915ShET9GIai6Nw4ZIkwLaouB1sWnviT5ij9x1u3cjAMOQ1IjFuavKE0R00vwXD4SkL')
 
 async function postCharge(req, res) {
   try {
